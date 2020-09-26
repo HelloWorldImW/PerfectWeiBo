@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BCC414817FF7E553214E61F /* Pods_PerfectWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220D3E979B95F152034B34EB /* Pods_PerfectWeiBo.framework */; };
 		D80C2E22251F338400CB6CFA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D80C2E21251F338400CB6CFA /* Alamofire */; };
+		D80C2E39251F86BF00CB6CFA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80C2E38251F86BF00CB6CFA /* AdSupport.framework */; };
+		D80C2E3B251F86D800CB6CFA /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80C2E3A251F86D800CB6CFA /* AppTrackingTransparency.framework */; };
+		D80C2E5D251F95B700CB6CFA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80C2E5C251F95B700CB6CFA /* Launch Screen.storyboard */; };
 		D8FF8E82251F250C00E06D63 /* PerfectWeiBoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF8E81251F250C00E06D63 /* PerfectWeiBoApp.swift */; };
 		D8FF8E84251F250C00E06D63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FF8E83251F250C00E06D63 /* ContentView.swift */; };
 		D8FF8E86251F250D00E06D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FF8E85251F250D00E06D63 /* Assets.xcassets */; };
@@ -17,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12CA30948AD95470FD629670 /* Pods-PerfectWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectWeiBo.debug.xcconfig"; path = "Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
+		220D3E979B95F152034B34EB /* Pods_PerfectWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerfectWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5463DB2667AAAD207636E896 /* Pods-PerfectWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerfectWeiBo.release.xcconfig"; path = "Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo.release.xcconfig"; sourceTree = "<group>"; };
+		D80C2E38251F86BF00CB6CFA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		D80C2E3A251F86D800CB6CFA /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		D80C2E4D251F8EF500CB6CFA /* PerfectWeiBo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerfectWeiBo-Bridging-Header.h"; sourceTree = "<group>"; };
+		D80C2E4E251F8EF500CB6CFA /* ZHBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHBridge.h; sourceTree = "<group>"; };
+		D80C2E5C251F95B700CB6CFA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D8FF8E7E251F250C00E06D63 /* PerfectWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FF8E81251F250C00E06D63 /* PerfectWeiBoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectWeiBoApp.swift; sourceTree = "<group>"; };
 		D8FF8E83251F250C00E06D63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,18 +44,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80C2E3B251F86D800CB6CFA /* AppTrackingTransparency.framework in Frameworks */,
 				D80C2E22251F338400CB6CFA /* Alamofire in Frameworks */,
+				D80C2E39251F86BF00CB6CFA /* AdSupport.framework in Frameworks */,
+				6BCC414817FF7E553214E61F /* Pods_PerfectWeiBo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D80C2E37251F86BE00CB6CFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D80C2E3A251F86D800CB6CFA /* AppTrackingTransparency.framework */,
+				D80C2E38251F86BF00CB6CFA /* AdSupport.framework */,
+				220D3E979B95F152034B34EB /* Pods_PerfectWeiBo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D80C2E4C251F8EDC00CB6CFA /* OCBridge */ = {
+			isa = PBXGroup;
+			children = (
+				D80C2E4E251F8EF500CB6CFA /* ZHBridge.h */,
+				D80C2E4D251F8EF500CB6CFA /* PerfectWeiBo-Bridging-Header.h */,
+			);
+			path = OCBridge;
+			sourceTree = "<group>";
+		};
+		D80C2E53251F8F4F00CB6CFA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D8FF8E8F251F250D00E06D63 /* Info.plist */,
+				D8FF8E8C251F250D00E06D63 /* PerfectWeiBo.xcdatamodeld */,
+				D8FF8E85251F250D00E06D63 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		D8FF8E75251F250C00E06D63 = {
 			isa = PBXGroup;
 			children = (
 				D8FF8E80251F250C00E06D63 /* PerfectWeiBo */,
 				D8FF8E7F251F250C00E06D63 /* Products */,
+				D80C2E37251F86BE00CB6CFA /* Frameworks */,
+				E06F421DB7D640598BCD3648 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,10 +106,10 @@
 			children = (
 				D8FF8E81251F250C00E06D63 /* PerfectWeiBoApp.swift */,
 				D8FF8E83251F250C00E06D63 /* ContentView.swift */,
-				D8FF8E85251F250D00E06D63 /* Assets.xcassets */,
 				D8FF8E8A251F250D00E06D63 /* Persistence.swift */,
-				D8FF8E8F251F250D00E06D63 /* Info.plist */,
-				D8FF8E8C251F250D00E06D63 /* PerfectWeiBo.xcdatamodeld */,
+				D80C2E5C251F95B700CB6CFA /* Launch Screen.storyboard */,
+				D80C2E53251F8F4F00CB6CFA /* Resource */,
+				D80C2E4C251F8EDC00CB6CFA /* OCBridge */,
 				D8FF8E87251F250D00E06D63 /* Preview Content */,
 			);
 			path = PerfectWeiBo;
@@ -77,6 +123,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E06F421DB7D640598BCD3648 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12CA30948AD95470FD629670 /* Pods-PerfectWeiBo.debug.xcconfig */,
+				5463DB2667AAAD207636E896 /* Pods-PerfectWeiBo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8FF8E92251F250D00E06D63 /* Build configuration list for PBXNativeTarget "PerfectWeiBo" */;
 			buildPhases = (
+				60F2713FFC0CAAE7FFA83A5E /* [CP] Check Pods Manifest.lock */,
 				D8FF8E7A251F250C00E06D63 /* Sources */,
 				D8FF8E7B251F250C00E06D63 /* Frameworks */,
 				D8FF8E7C251F250C00E06D63 /* Resources */,
+				4AB2FB20DEED3C6D684939BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -111,6 +168,7 @@
 				TargetAttributes = {
 					D8FF8E7D251F250C00E06D63 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -140,12 +198,55 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80C2E5D251F95B700CB6CFA /* Launch Screen.storyboard in Resources */,
 				D8FF8E89251F250D00E06D63 /* Preview Assets.xcassets in Resources */,
 				D8FF8E86251F250D00E06D63 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AB2FB20DEED3C6D684939BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F2713FFC0CAAE7FFA83A5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PerfectWeiBo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8FF8E7A251F250C00E06D63 /* Sources */ = {
@@ -280,13 +381,19 @@
 		};
 		D8FF8E93251F250D00E06D63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12CA30948AD95470FD629670 /* Pods-PerfectWeiBo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PerfectWeiBo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PerfectWeiBo/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PerfectWeiBo/ThirdLibraries/BUAd",
+				);
+				INFOPLIST_FILE = PerfectWeiBo/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +401,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.joe.PerfectWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PerfectWeiBo/OCBridge/PerfectWeiBo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,13 +410,19 @@
 		};
 		D8FF8E94251F250D00E06D63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5463DB2667AAAD207636E896 /* Pods-PerfectWeiBo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"PerfectWeiBo/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PerfectWeiBo/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PerfectWeiBo/ThirdLibraries/BUAd",
+				);
+				INFOPLIST_FILE = PerfectWeiBo/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -315,6 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.joe.PerfectWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PerfectWeiBo/OCBridge/PerfectWeiBo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
