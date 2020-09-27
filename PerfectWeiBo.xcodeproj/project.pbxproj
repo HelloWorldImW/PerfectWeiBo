@@ -27,7 +27,6 @@
 		D80C2E38251F86BF00CB6CFA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D80C2E3A251F86D800CB6CFA /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		D80C2E4D251F8EF500CB6CFA /* PerfectWeiBo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerfectWeiBo-Bridging-Header.h"; sourceTree = "<group>"; };
-		D80C2E4E251F8EF500CB6CFA /* ZHBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHBridge.h; sourceTree = "<group>"; };
 		D80C2E5C251F95B700CB6CFA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		D8FF8E7E251F250C00E06D63 /* PerfectWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8FF8E81251F250C00E06D63 /* PerfectWeiBoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectWeiBoApp.swift; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		D80C2E4C251F8EDC00CB6CFA /* OCBridge */ = {
 			isa = PBXGroup;
 			children = (
-				D80C2E4E251F8EF500CB6CFA /* ZHBridge.h */,
 				D80C2E4D251F8EF500CB6CFA /* PerfectWeiBo-Bridging-Header.h */,
 			);
 			path = OCBridge;
@@ -143,7 +141,7 @@
 				D8FF8E7A251F250C00E06D63 /* Sources */,
 				D8FF8E7B251F250C00E06D63 /* Frameworks */,
 				D8FF8E7C251F250C00E06D63 /* Resources */,
-				4AB2FB20DEED3C6D684939BC /* [CP] Copy Pods Resources */,
+				ACFED441330CC2E184204D8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,23 +205,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4AB2FB20DEED3C6D684939BC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		60F2713FFC0CAAE7FFA83A5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +225,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACFED441330CC2E184204D8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerfectWeiBo/Pods-PerfectWeiBo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -386,8 +384,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"PerfectWeiBo/Preview Content\"";
+				DEVELOPMENT_TEAM = 4UV82BNFSA;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +401,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.joe.PerfectWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = allTest_20200520;
 				SWIFT_OBJC_BRIDGING_HEADER = "PerfectWeiBo/OCBridge/PerfectWeiBo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -415,8 +416,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"PerfectWeiBo/Preview Content\"";
+				DEVELOPMENT_TEAM = 4UV82BNFSA;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,6 +433,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangzh.joe.PerfectWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = allTest_20200520;
 				SWIFT_OBJC_BRIDGING_HEADER = "PerfectWeiBo/OCBridge/PerfectWeiBo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

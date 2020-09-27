@@ -8,9 +8,13 @@
 import SwiftUI
 import AppTrackingTransparency
 import AdSupport
-import BUAdSDK
+
+import GoogleMobileAds
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    var appOpenAd: GADAppOpenAd?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
     }
@@ -21,6 +25,7 @@ struct PerfectWeiBoApp: App {
     let persistenceController = PersistenceController.preview
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     
     var body: some Scene {
         WindowGroup {
@@ -34,15 +39,14 @@ struct PerfectWeiBoApp: App {
             return
         }
         requestIDFA()
-        BUAdSDKManager.setAppID("5108684")
-        BUAdSDKManager.setIsPaidApp(false)
-        BUAdSDKManager.setLoglevel(.debug)
-        let frame = UIScreen.main.bounds
-        let adView:BUSplashAdView = BUSplashAdView(slotID: "887385710", frame: frame)
-        adView.delegate = appDelegate
-        adView.loadAdData()
-        window.rootViewController?.view.addSubview(adView)
-        adView.rootViewController = window.rootViewController
+        GADAppOpenAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1033173712", request: GADRequest(), orientation: .portrait) { (openAd, err) in
+            if (err != nil) {
+                return;
+            }
+            appDelegate.appOpenAd = openAd;
+            let rootVC = window.rootViewController
+            openAd?.present(fromRootViewController: rootVC!)
+        }
     }
     
 }
@@ -69,14 +73,7 @@ private func requestIDFA() {
 }
 
 
-extension AppDelegate: BUSplashAdDelegate{
-    func splashAdDidLoad(_ splashAd: BUSplashAdView) {
-        print("")
-    }
+extension AppDelegate{
     
-    func splashAdDidClose(_ splashAd: BUSplashAdView) {
-        splashAd.removeFromSuperview()
-        print("")
-    }
     
 }
