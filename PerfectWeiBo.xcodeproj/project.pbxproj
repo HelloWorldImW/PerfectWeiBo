@@ -74,8 +74,11 @@
 		D80C2E53251F8F4F00CB6CFA /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				D8FF8E81251F250C00E06D63 /* PerfectWeiBoApp.swift */,
+				D8FF8E8A251F250D00E06D63 /* Persistence.swift */,
 				D8FF8E8F251F250D00E06D63 /* Info.plist */,
 				D8FF8E8C251F250D00E06D63 /* PerfectWeiBo.xcdatamodeld */,
+				D80C2E5C251F95B700CB6CFA /* Launch Screen.storyboard */,
 				D8FF8E85251F250D00E06D63 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -102,10 +105,7 @@
 		D8FF8E80251F250C00E06D63 /* PerfectWeiBo */ = {
 			isa = PBXGroup;
 			children = (
-				D8FF8E81251F250C00E06D63 /* PerfectWeiBoApp.swift */,
 				D8FF8E83251F250C00E06D63 /* ContentView.swift */,
-				D8FF8E8A251F250D00E06D63 /* Persistence.swift */,
-				D80C2E5C251F95B700CB6CFA /* Launch Screen.storyboard */,
 				D80C2E53251F8F4F00CB6CFA /* Resource */,
 				D80C2E4C251F8EDC00CB6CFA /* OCBridge */,
 				D8FF8E87251F250D00E06D63 /* Preview Content */,
