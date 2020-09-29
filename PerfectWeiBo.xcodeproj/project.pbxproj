@@ -389,10 +389,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PerfectWeiBo/Preview Content\"";
 				DEVELOPMENT_TEAM = 4UV82BNFSA;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PerfectWeiBo/ThirdLibraries/BUAd",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PerfectWeiBo/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -421,10 +418,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PerfectWeiBo/Preview Content\"";
 				DEVELOPMENT_TEAM = 4UV82BNFSA;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PerfectWeiBo/ThirdLibraries/BUAd",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PerfectWeiBo/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

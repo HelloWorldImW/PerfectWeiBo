@@ -16,6 +16,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     var appOpenAd: GADAppOpenAd?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        GADAppOpenAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1033173712", request: GADRequest(), orientation: .portrait) { (openAd, err) in
+            if (err != nil) {
+                return;
+            }
+            self.appOpenAd = openAd;
+            guard let window = UIApplication.shared.windows.first else {
+                return
+            }
+            requestIDFA()
+            let rootVC = window.rootViewController
+            openAd?.present(fromRootViewController: rootVC!)
+        }
         return true
     }
 }
@@ -35,18 +47,7 @@ struct PerfectWeiBoApp: App {
     }
     
     func configAD() {
-        guard let window = UIApplication.shared.windows.first else {
-            return
-        }
-        requestIDFA()
-        GADAppOpenAd.load(withAdUnitID: "ca-app-pub-3940256099942544/1033173712", request: GADRequest(), orientation: .portrait) { (openAd, err) in
-            if (err != nil) {
-                return;
-            }
-            appDelegate.appOpenAd = openAd;
-            let rootVC = window.rootViewController
-            openAd?.present(fromRootViewController: rootVC!)
-        }
+
     }
     
 }
